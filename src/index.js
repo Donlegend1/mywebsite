@@ -30,23 +30,23 @@ root.render(
           <Routes>
             <Route element={<App />}>
               <Route
-                path={`${process.env.PUBLIC_URL}/`}
+                path={`https://legend-osa-consultants.vercel.app/`}
                 element={<Home />}
               />
               <Route
-                path={`${process.env.PUBLIC_URL}/about`}
+                path={`https://legend-osa-consultants.vercel.app/about`}
                 element={<About />}
               />
               <Route
-                path={`${process.env.PUBLIC_URL}/services`}
+                path={`https://legend-osa-consultants.vercel.app/services`}
                 element={<Services />}
               />
               <Route
-                path={`${process.env.PUBLIC_URL}/project`}
+                path={`https://legend-osa-consultants.vercel.app/project`}
                 element={<Projects />}
               />
               <Route
-                path={`${process.env.PUBLIC_URL}/contact`}
+                path={`https://legend-osa-consultants.vercel.app/contact`}
                 element={<Contact />}
               />
             </Route>
@@ -56,4 +56,3 @@ root.render(
     </React.StrictMode>
   </>
 );
-
