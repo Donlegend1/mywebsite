@@ -27,7 +27,7 @@ root.render(
     <BrowserRouter>
       <React.Suspense fallback={<Loaderimg />}>
         <Routes>
-          <Route element={<App />}>
+          {/* <Route element={<App />}> */}
             <Route
               path={`${process.env.PUBLIC_URL}/`}
               element={<Home />}
@@ -48,7 +48,7 @@ root.render(
               path={`${process.env.PUBLIC_URL}/contact`}
               element={<Contact />}
             />
-          </Route>
+          {/* </Route> */}
         </Routes>
       </React.Suspense>
     </BrowserRouter>
