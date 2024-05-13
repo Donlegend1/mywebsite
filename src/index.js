@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Fragment } from "react-router-dom";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
@@ -23,36 +23,37 @@ const Loaderimg = () => (
 );
 
 root.render(
-  <>
-    <React.StrictMode>
+  <><Fragment>
+   
       <BrowserRouter>
         <React.Suspense fallback={<Loaderimg />}>
           <Routes>
             <Route element={<App />}>
               <Route
-                path={`https://legend-osa-consultants.vercel.app/`}
+                path={`${process.env.PUBLIC_URL}/`}
                 element={<Home />}
               />
               <Route
-                path={`https://legend-osa-consultants.vercel.app/about`}
+                path={`${process.env.PUBLIC_URL}/about`}
                 element={<About />}
               />
               <Route
-                path={`https://legend-osa-consultants.vercel.app/services`}
+                path={`${process.env.PUBLIC_URL}/services`}
                 element={<Services />}
               />
               <Route
-                path={`https://legend-osa-consultants.vercel.app/project`}
+                path={`${process.env.PUBLIC_URL}/project`}
                 element={<Projects />}
               />
               <Route
-                path={`https://legend-osa-consultants.vercel.app/contact`}
+                path={`${process.env.PUBLIC_URL}/contact`}
                 element={<Contact />}
               />
             </Route>
           </Routes>
         </React.Suspense>
       </BrowserRouter>
-    </React.StrictMode>
+    </Fragment>
   </>
 );
+
